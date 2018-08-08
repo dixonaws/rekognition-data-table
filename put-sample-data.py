@@ -14,7 +14,7 @@ def main():
 	dictRow = {}
 	dictRow['FaceId'] = "f35dc12b-8507-4412-a3d7-99455a3f710c"
 	dictRow[
-		'data'] = "{'name': 'Jake Steinerman', 'email': 'jasteinerman@dow.com', 'mobile': '5166592089', 'cmdc_resident': 'false'}"
+		'data'] = "{'name': 'John Dough', 'email': 'john@dough.com', 'mobile': '8888675309', 'cmdc_resident': 'false'}"
 
 	response = table.put_item(Item=dictRow)
 
@@ -30,8 +30,9 @@ def main():
 
 	print(json.dumps(response['Item']['data'], indent=4, separators=(',', ': ')))
 
-	# this doesnt work because property name are expected in double quotes
-	# dictItem=json.loads(response['Item']['data'])
+
+# this doesnt work because property name are expected in double quotes
+# dictItem=json.loads(response['Item']['data'])
 
 
 main()
